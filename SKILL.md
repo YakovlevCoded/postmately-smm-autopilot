@@ -22,8 +22,7 @@ measurement loop. It uses Postmately MCP for generation and publishing.
 ### 1. Discover the channels
 
 Call `list_channels`. Use only channels with `canPublish: true`. Read
-`rules`: `maxChars`, `mediaRequired`, `maxImages`, `maxVideos`. For Mate
-channels write in the channel `language`.
+`rules`: `maxChars`, `mediaRequired`, `maxImages`, `maxVideos`.
 
 Ask for one primary channel and one measurable goal for the month:
 12 posts, 30 site visits or 10 leads. Do not start with five networks.
