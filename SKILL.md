@@ -50,6 +50,13 @@ vertical video and poll `get_video` until `state` is `ready`.
 If the user already has final images or clips, use `import_media` and
 skip generation. Do not spend credits when the files already exist.
 
+For a video edited on this machine, `list_clips` (or `GET https://api.postmately.com/v1/clips`,
+no key) is Postmately's free hook gallery: people reacting, 1080x1920, with
+meta to pick by (fits, mood, setting, a phone in hand, sample lines). The two
+formats that travel furthest on TikTok are a hook and an app demo
+(`fits=hook-demo`, then the product's screens) and a hook and a wall of text
+(`fits=wall`). Recipes: https://postmately.com/skills/postmately-video/SKILL.md
+
 ### 4. Validate before writing
 
 Call `validate_post` with the channel, text and media ids. Read `issues`
