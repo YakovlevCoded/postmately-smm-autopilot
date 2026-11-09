@@ -1,0 +1,11 @@
+{
+  "name": "postmately",
+  "version": "1.1.0",
+  "description": "Social media autopilot: carousels, short videos, scheduling and publishing to TikTok, YouTube, Instagram, Telegram, VK and more through Postmately MCP.",
+  "contextFileName": "SKILL.md",
+  "mcpServers": {
+    "postmately": {
+      "httpUrl": "https://api.postmately.com/mcp"
+    }
+  }
+}

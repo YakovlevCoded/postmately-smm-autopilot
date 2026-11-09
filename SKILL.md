@@ -11,11 +11,9 @@ measurement loop. It uses Postmately MCP for generation and publishing.
 
 ## Setup
 
-1. Create an API key in Postmately under Settings, then API.
-2. Keep it in the environment as `POSTMATELY_API_KEY`. Never print it or
-   commit it.
-3. Connect MCP: `https://api.postmately.com/mcp` with
-   `Authorization: Bearer $POSTMATELY_API_KEY`.
+Connect the Postmately MCP server `https://api.postmately.com/mcp`. It signs in with OAuth: the user
+approves access to their Postmately workspace once. Clients without OAuth can send an API key from
+Postmately Settings, then API, as `Authorization: Bearer <key>`. Never ask for, print or commit a key.
 
 ## Workflow
 

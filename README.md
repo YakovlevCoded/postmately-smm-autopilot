@@ -1,8 +1,8 @@
 # SMM Autopilot
 
-A skill for AI agents (Claude Code, Codex, Cursor) that turns a website or topic into a month of social media posts, carousels and short videos, gets your approval, publishes through [Postmately](https://postmately.com/en/) MCP, and measures what worked.
+A skill for AI agents (Claude, ChatGPT, Claude Code, Codex, Cursor, Gemini CLI, OpenClaw) that turns a website or topic into a month of social media posts, carousels and short videos, gets your approval, publishes through [Postmately](https://postmately.com/en/) MCP, and measures what worked.
 
-Publishes today to TikTok, YouTube, Pinterest, Telegram channels, VK, Bluesky and Mastodon. Instagram, Facebook, LinkedIn and Threads are in platform review.
+Publishes to TikTok, YouTube, Instagram, Facebook, Threads, Pinterest, Telegram channels, VK, Bluesky and Mastodon. LinkedIn is in platform review. One of the few MCP servers that posts to VK and Telegram.
 
 ## Try it
 
@@ -29,16 +29,24 @@ Or copy `SKILL.md` into your agent's skills folder.
 
 ## Setup
 
-1. Create an API key in Postmately under Settings, then API.
-2. Keep it in the environment as `POSTMATELY_API_KEY`.
-3. Connect MCP: `https://api.postmately.com/mcp` with `Authorization: Bearer $POSTMATELY_API_KEY`.
+The MCP server signs you in with OAuth: add it, approve access to your Postmately workspace once, done.
 
-In Claude Code:
+- **claude.ai / Claude Desktop:** Settings, Connectors, Add custom connector, `https://api.postmately.com/mcp`.
+- **ChatGPT:** add `https://api.postmately.com/mcp` as a connector (developer mode) or install the Postmately app once it is listed.
+- **Claude Code:**
 
-```bash
-claude mcp add --transport http postmately https://api.postmately.com/mcp \
-  --header "Authorization: Bearer $POSTMATELY_API_KEY"
-```
+  ```bash
+  claude mcp add --transport http postmately https://api.postmately.com/mcp
+  ```
+
+- **Gemini CLI:**
+
+  ```bash
+  gemini extensions install https://github.com/YakovlevCoded/postmately-smm-autopilot
+  ```
+
+- **Cursor, Codex, scripts:** the same URL with OAuth, or an API key from Postmately Settings, API sent as
+  `Authorization: Bearer <key>`.
 
 The free plan covers a content plan, 3 carousels and 1 video, no card. The server is listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=postmately) as `com.postmately/postmately`.
 
