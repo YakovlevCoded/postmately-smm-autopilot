@@ -12,6 +12,7 @@
   "repository": "https://github.com/YakovlevCoded/postmately-smm-autopilot",
   "license": "MIT",
   "keywords": ["postmately", "postmately mcp", "smm autopilot"],
+  "skills": "./",
   "icon": "./assets/logo.png",
   "documentationUrl": "https://postmately.com/en/mcp-social-media/",
   "supportUrl": "https://postmately.com/support/",
