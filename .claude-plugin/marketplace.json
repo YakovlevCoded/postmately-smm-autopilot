@@ -1,0 +1,16 @@
+{
+  "name": "postmately",
+  "description": "Postmately plugins for Claude Code: social media autopilot through the Postmately MCP server.",
+  "owner": {
+    "name": "Postmately",
+    "email": "hello@postmately.com",
+    "url": "https://postmately.com"
+  },
+  "plugins": [
+    {
+      "name": "postmately",
+      "source": "./",
+      "description": "Social media autopilot: content plan, carousels, short videos, approval, scheduling and publishing through Postmately."
+    }
+  ]
+}

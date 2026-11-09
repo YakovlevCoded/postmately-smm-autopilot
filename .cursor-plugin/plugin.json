@@ -1,0 +1,15 @@
+{
+  "name": "postmately",
+  "version": "1.1.0",
+  "description": "Social media autopilot: turn a website or topic into a month of posts, carousels and short videos, approve them, then schedule and publish to TikTok, YouTube, Instagram, Telegram, VK and more through Postmately.",
+  "author": {
+    "name": "Postmately",
+    "email": "hello@postmately.com"
+  },
+  "homepage": "https://postmately.com/en/mcp-social-media/",
+  "repository": "https://github.com/YakovlevCoded/postmately-smm-autopilot",
+  "license": "MIT",
+  "keywords": ["postmately", "postmately mcp", "smm autopilot"],
+  "logo": "assets/logo.png",
+  "mcpServers": "./.mcp.json"
+}

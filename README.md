@@ -12,6 +12,14 @@ After setup, ask your agent:
 
 ## Install
 
+As a plugin (skill and MCP server together):
+
+- **Claude Code:** `/plugin marketplace add YakovlevCoded/postmately-smm-autopilot`, then `/plugin install postmately@postmately`.
+- **Grok Build:** `grok plugin marketplace add https://github.com/YakovlevCoded/postmately-smm-autopilot`, then `grok plugin install postmately`.
+- **Cursor:** add this repository as a plugin; it ships `.cursor-plugin/plugin.json`.
+
+As a skill only:
+
 ```bash
 npx skills add YakovlevCoded/postmately-smm-autopilot
 ```
@@ -32,7 +40,7 @@ Or copy `SKILL.md` into your agent's skills folder.
 The MCP server signs you in with OAuth: add it, approve access to your Postmately workspace once, done.
 
 - **claude.ai / Claude Desktop:** Settings, Connectors, Add custom connector, `https://api.postmately.com/mcp`.
-- **ChatGPT:** add `https://api.postmately.com/mcp` as a connector (developer mode) or install the Postmately app once it is listed.
+- **ChatGPT:** Plugins, Add custom MCP server, `https://api.postmately.com/mcp`, or install the Postmately plugin once it is listed.
 - **Claude Code:**
 
   ```bash
@@ -49,6 +57,15 @@ The MCP server signs you in with OAuth: add it, approve access to your Postmatel
   `Authorization: Bearer <key>`.
 
 The free plan covers a content plan, 3 carousels and 1 video, no card. The server is listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=postmately) as `com.postmately/postmately`.
+
+## What the plugin runs and sends
+
+The plugin runs no local code. It contains one skill (`SKILL.md`, instructions only) and one remote MCP server,
+`https://api.postmately.com/mcp`. On first use your agent opens the Postmately sign-in page (OAuth 2.1); after you approve,
+the agent sends Postmately only what you ask it to: links and topics to turn into posts, post texts, media you import, and
+publishing times. Postmately stores your drafts and posts in your workspace, publishes only to the channels you connected in
+the Postmately dashboard, and returns post metrics. Generating carousels and videos spends credits from your Postmately
+balance. See the [privacy policy](https://postmately.com/privacy/) and [terms](https://postmately.com/terms/).
 
 ## Guardrails
 
